@@ -1,0 +1,44 @@
+name: 功能建议
+description: 提出一个新模块或改进点
+title: '[Feature] '
+labels: ['enhancement']
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 想解决什么问题
+      description: 描述你现在的做法与痛点
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: 期望的方案
+      description: 希望 FileFlow 提供什么样的能力或交互
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: 归属模块
+      options:
+        - 新增模块
+        - 批量重命名
+        - 图片批处理
+        - 重复文件清理
+        - 目录同步
+        - 文件整理
+        - 规则清理
+        - 全局 / 界面
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: 其他备选方案
+      description: 是否考虑过其他做法，或参考了哪些同类工具
+    validations:
+      required: false

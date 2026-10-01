@@ -1,0 +1,68 @@
+name: 缺陷反馈
+description: 报告一个可复现的问题
+title: '[Bug] '
+labels: ['bug']
+body:
+  - type: markdown
+    attributes:
+      value: 感谢反馈！请尽量填写完整，能大幅加快定位速度。
+
+  - type: dropdown
+    id: module
+    attributes:
+      label: 涉及模块
+      options:
+        - 批量重命名
+        - 图片批处理
+        - 重复文件清理
+        - 目录同步
+        - 文件整理
+        - 规则清理
+        - 操作历史 / 撤销
+        - 其他 / 启动问题
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: 版本号
+      description: 界面左下角显示的版本，例如 v0.1.0
+    validations:
+      required: true
+
+  - type: input
+    id: os
+    attributes:
+      label: 操作系统
+      placeholder: Windows 11 23H2 / macOS 15.1 / Ubuntu 24.04
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 复现步骤
+      description: 越具体越好，包含操作顺序与参数设置
+      placeholder: |
+        1. 打开「批量重命名」
+        2. 选择目录 X，勾选「包含子目录」
+        3. 添加规则「查找替换」…
+        4. 点击执行
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期望结果
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际结果
+      description: 可附上底部日志面板的内容
+    validations:
+      required: true
